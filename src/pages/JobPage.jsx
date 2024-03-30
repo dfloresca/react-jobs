@@ -24,7 +24,6 @@ const JobPage = ({ deleteJob }) => {
 
     return (
         <>
-            {/* <!-- Go Back --> */}
             <section>
                 <div className="container m-auto py-6 px-6">
                     <Link
