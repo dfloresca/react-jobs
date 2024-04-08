@@ -6,6 +6,7 @@ import { toast } from 'react-toastify'
 const AddJobPage = ({ addJobSubmit }) => {
     const [title, setTitle] = useState('');
     const [type, setType] = useState('Full-Time');
+    const [applied, setApplied] = useState('Yes');
     const [location, setLocation] = useState('');
     const [description, setDescription] = useState('');
     const [salary, setSalary] = useState('Under $50K');
@@ -22,6 +23,7 @@ const AddJobPage = ({ addJobSubmit }) => {
         const newJob = {
             title,
             type,
+            applied,
             location,
             description,
             salary,
@@ -64,6 +66,21 @@ const AddJobPage = ({ addJobSubmit }) => {
                                     <option value="Part-Time">Part-Time</option>
                                     <option value="Remote">Remote</option>
                                     <option value="Internship">Internship</option>
+                                </select>
+                            </div>
+                            <div className="mb-4">
+                                <label htmlFor="type" className="block text-gray-700 font-bold mb-2"
+                                >Applied?</label>
+                                <select
+                                    id="applied"
+                                    name="applied"
+                                    className="border rounded w-full py-2 px-3"
+                                    required
+                                    value={applied}
+                                    onChange={(e) => setApplied(e.target.value) }
+                                >
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
                                 </select>
                             </div>
 

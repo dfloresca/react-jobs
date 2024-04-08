@@ -83,6 +83,21 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "af46",
+      "title": "test with applied drop down",
+      "type": "Full-Time",
+      "applied": "Yes",
+      "location": "test",
+      "description": "test",
+      "salary": "Under $50K",
+      "company": {
+        "name": "test",
+        "description": "test",
+        "contactEmail": "test@test.com",
+        "contactPhone": "test"
+      }
     }
   ]
 }
