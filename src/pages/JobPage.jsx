@@ -95,6 +95,9 @@ const JobPage = ({ deleteJob }) => {
 
                                 <h3 className="text-xl">Applied?:</h3>
                                 <p className="my-2 bg-indigo-100 p-2 font-bold">{ job.applied }</p>
+                                
+                                <h3 className="text-xl">Job URL:</h3>
+                                <a className="my-2 bg-indigo-100 p-2 font-bold" href={`${job.url}`}>{ job.url }</a>
                             </div>
 
 

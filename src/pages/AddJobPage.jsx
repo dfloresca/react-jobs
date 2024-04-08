@@ -13,6 +13,7 @@ const AddJobPage = ({ addJobSubmit }) => {
     const [companyName, setCompanyName] = useState('');
     const [companyDescription, setCompanyDescription] = useState('');
     const [contactEmail, setContactEmail] = useState('');
+    const [url, setUrl] = useState('');
     const [contactPhone, setContactPhone] = useState('');
 
     const navigate = useNavigate();
@@ -27,6 +28,7 @@ const AddJobPage = ({ addJobSubmit }) => {
             location,
             description,
             salary,
+            url,
             company: {
                 name: companyName,
                 description: companyDescription,
@@ -201,6 +203,22 @@ const AddJobPage = ({ addJobSubmit }) => {
                                     required
                                     value={contactEmail}
                                     onChange={(e) => setContactEmail(e.target.value) }
+                                />
+                            </div>
+                            <div className="mb-4">
+                                <label
+                                    htmlFor="url"
+                                    className="block text-gray-700 font-bold mb-2"
+                                >Job URL</label>
+                                <input
+                                    type="url"
+                                    id="url"
+                                    name="url"
+                                    className="border rounded w-full py-2 px-3"
+                                    placeholder="URL for job"
+                                    required
+                                    value={url}
+                                    onChange={(e) => setUrl(e.target.value) }
                                 />
                             </div>
                             <div className="mb-4">
